@@ -81,5 +81,5 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJPbmx5IE1lYW50IGZvciBhIEpXVCBkZW1
 
 - JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA.
 
-- For example see:
+- For example see: https://github.com/AndreasHeindorff/MEAN_Period_4/blob/master/config/jwtConfig.js
 
