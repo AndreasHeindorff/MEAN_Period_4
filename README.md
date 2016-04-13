@@ -30,7 +30,7 @@ Cross Site scripting is when you write scripts directly in a guestbook or other 
 Somewhat the same method as XSS, a page where you can write SQL statements directly in a login or a search field, enables the use of the 1=1 method to gain priviliges to do what ever you want via SQL.
 
 - DDOS:
-Denial Of Service attacks is when you send a lot of requests to a server using a bot network to either deny 'real' traffic access or to crash the server. Threats using a NoSQL database: There is not something directly similar to SQL injection with a NoSQL database, but there are other security issues - e.g. with MongoDB you dont have a admin password thereby having the database 'exposed' if the communicationport 27017 and 28017 is open on the server.
+Denial Of Service attacks is when you send a lot of requests to a server using a bot network to either deny 'real' traffic access or to crash the server. Threats using a NoSQL database: There is not something directly similar to SQL injection with a NoSQL database, but there are other security issues. with MongoDB you dont have a admin password thereby having the database 'exposed' if the communicationport 27017 and 28017 is open on the server.
 
 ###3. Explain, at a fundamental level, the technologies involved, and the steps required in initializing a SSL connection between a browser and a server and how to use SSL in a secure way.
 
@@ -48,3 +48,8 @@ Denial Of Service attacks is when you send a lot of requests to a server using a
 
 - 7: The browser decrypts the http data and html document using the symmetric key and displays the information.
 
+###4. Explain and demonstrate ways to protect user passwords on our backends, and why this is necessary.
+
+The reason why this is nessesary is that in general we only have 1 user with a unique name and a password as the schema for our Database. We also don’t want to store the passwords in clear text, so whenever we want to save a user, we salt the password and store this value to our Database. This also means, we have to add a special compare method to compare those passwords, so we never get our hands on the real value of the user’s password. This way we protect the endpoints.
+
+For example see: https://github.com/AndreasHeindorff/MEAN_Period_4/blob/master/routes/users.js
