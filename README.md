@@ -53,3 +53,7 @@ Denial Of Service attacks is when you send a lot of requests to a server using a
 The reason why this is nessesary is that in general we only have 1 user with a unique name and a password as the schema for our Database. We also don’t want to store the passwords in clear text, so whenever we want to save a user, we salt the password and store this value to our Database. This also means, we have to add a special compare method to compare those passwords, so we never get our hands on the real value of the user’s password. This way we protect the endpoints.
 
 For example see: https://github.com/AndreasHeindorff/MEAN_Period_4/blob/master/routes/users.js
+
+###5. Explain about password hashing, salts and the difference between bcrypt and older (not recommended) algorithms like sha1, md5 etc.
+
+A Hashing is a way to create a hash value by using an algorithm like SHA or MD5, resulting in getting smaller data value, aswell as encrypting a value. These functions are pretty quick and even though its a one way function, the hashed value will always be the same. A hacker can have a Rainbow Table and the decode the value. By adding a salt you use a slower algorithm to create a salted version, this ensures security because, by todays standard, it would take forever to create a Rainbow Table for the different salt values. BCrypt does a hashing and salting and is an easy tool to use in your express. See models/users.js
