@@ -27,7 +27,8 @@ TLS is newer and more secure than SSL.
 Cross Site scripting is when you write scripts directly in a guestbook or other places on a webpage which is then being run when other people visit the page, this gives a lot of possibilities for the scripter to gain access to user-sensitive data.
 
 - SQL Injection: 
-Somewhat the same method as with XSS, a page where you can write SQL statements directly in a login or a search field, enables the use of the 1=1 method to gain priviliges to do what ever you want via SQL.
+Somewhat the same method as XSS, a page where you can write SQL statements directly in a login or a search field, enables the use of the 1=1 method to gain priviliges to do what ever you want via SQL.
 
-
+- DDOS:
+Denial Of Service attacks is when you send a lot of requests to a server using a bot network to either deny 'real' traffic access or to crash the server. Threats using a NoSQL database: There is not something directly similar to SQL injection with a NoSQL database, but there are other security issues - e.g. with MongoDB you dont have a admin password thereby having the database 'exposed' if the communicationport 27017 and 28017 is open on the server.
 
