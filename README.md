@@ -83,3 +83,22 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJPbmx5IE1lYW50IGZvciBhIEpXVCBkZW1
 
 - For example see: https://github.com/AndreasHeindorff/MEAN_Period_4/blob/master/config/jwtConfig.js
 
+####8: Explain and demonstrate use of the npm passportjs module.
+
+- Passport is authentication middleware for Node. It is designed to serve a singular purpose: authenticate requests. When writing modules, encapsulation is a virtue, so Passport delegates all other functionality to the application. This separation of concerns keeps code clean and maintainable, and makes Passport extremely easy to integrate into an application.
+
+- In modern web applications, authentication can take a variety of forms. Traditionally, users log in by providing a username and password. With the rise of social networking, single sign-on using an OAuth provider such as Facebook or Twitter has become a popular authentication method. Services that expose an API often require token-based credentials to protect access.
+
+- Passport recognizes that each application has unique authentication requirements. Authentication mechanisms, known as strategies, are packaged as individual modules. Applications can choose which strategies to employ, without creating unnecessary dependencies.
+
+- For example see: https://github.com/AndreasHeindorff/MEAN_Period_4/blob/master/config/passport.js
+ 
+####9: Explain, at a very basic level, OAuth 2 + OpenID Connect and the problems it solves.
+
+OAuth2/OpenID Connect: Is an Open Standard for Authentication which allows user to log into third party websites being authorized by their MicroSoft, Google, Facebook, Twitter etc. account. These parties grants a secure token which is issued to the user. This is achieved without exposing the users login credentials. This should make it more secure to identify that the user is who they say they are and you dont need to store any user/passwords and therby needing alot of security on your database.
+
+####10. Demonstrate, with focus on security, a proposal for an Express/Mongo+Angular-seed with built in support for most of the basic security problems, SSL and ready to deploy on your favourite Cloud Hosting Service.
+
+Currently not ready to deploy on a Cloud Hosting Service.
+
+See the project and files in this repo.
