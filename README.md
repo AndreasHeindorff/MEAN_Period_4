@@ -32,3 +32,13 @@ Somewhat the same method as XSS, a page where you can write SQL statements direc
 - DDOS:
 Denial Of Service attacks is when you send a lot of requests to a server using a bot network to either deny 'real' traffic access or to crash the server. Threats using a NoSQL database: There is not something directly similar to SQL injection with a NoSQL database, but there are other security issues - e.g. with MongoDB you dont have a admin password thereby having the database 'exposed' if the communicationport 27017 and 28017 is open on the server.
 
+###3. Explain, at a fundamental level, the technologies involved, and the steps required in initializing a SSL connection between a browser and a server and how to use SSL in a secure way.
+
+- 1: A browser requests a secure page, most commonly known as https://.
+- 2: The web server sends back its public key along with its certificate.
+- 3: The browser ensures that the certificate is issued by a trusted party, that the certificate is still valid and that the certificate is related to the site contacted.
+- 4: The browser uses the public key, to encrypt a random symmetric encryption key and then sends it to the server with the encrypted URL required.
+- 5: The web server decrypts the symmetric encryption key using its private key and uses the symmetric key to decrypt the URL and http data.
+- 6: The web server sends back the requested html document and http data encrypted with the symmetric key.
+- 7: The browser decrypts the http data and html document using the symmetric key and displays the information.
+
