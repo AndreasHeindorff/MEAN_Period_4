@@ -57,3 +57,14 @@ For example see: https://github.com/AndreasHeindorff/MEAN_Period_4/blob/master/r
 ###5. Explain about password hashing, salts and the difference between bcrypt and older (not recommended) algorithms like sha1, md5 etc.
 
 A Hashing is a way to create a hash value by using an algorithm like SHA or MD5, resulting in getting smaller data value, aswell as encrypting a value. These functions are pretty quick and even though its a one way function, the hashed value will always be the same. A hacker can have a Rainbow Table and the decode the value. By adding a salt you use a slower algorithm to create a salted version, this ensures security because, by todays standard, it would take forever to create a Rainbow Table for the different salt values. BCrypt does a hashing and salting and is an easy tool to use in your express. See models/users.js
+
+####6. Explain about JSON Web Tokens (JWT) and why they are very suited for a REST-based API
+
+JSON Web Token (JWT) is a JSON-based open standard (RFC 7519) for passing claims between parties in web application environment. The
+tokens are designed to be compact, URL-safe and usable especially in web browser single sign-on (SSO) context. JWT claims can be typically used to pass identity of authenticated users between an identity provider and a service provider, or any other type of claims as required by business processes. The tokens can also be authenticated and encrypted.
+
+JSON Web Tokens (JWT) are a more modern approach to authentication. As the web moves to a greater separation between the client and server, JWT provides a wonderful alternative to traditional cookie based authentication models.
+JWTs provide a way for clients to authenticate every request without having to maintain a session or repeatedly pass login credentials to the server. In other words JWT is a fantastic and simple way to communicate trusted information across untrusted channels.
+
+Example of what a JWT looks like: 
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJPbmx5IE1lYW50IGZvciBhIEpXVCBkZW1vIiwiaXNzIjoibGFtQGNwaGJ1c2luZXNzLmRrIiwiaWF0IjoxNDYwNTUyNTQ1LjIxLCJleHAiOjE0NjA1NTI4NDUuMjEsInN1YiI6ImxhbSIsImFkZGl0aW9uYWwiOnsiYSI6IkhlbGxvIENsYXNzIiwiYiI6IkkgY2FuIGJhc2ljYWxseSBhZGQgJ3doYXRldmVyJyBJIGxpa2UgaW4gYSBKV1QifX0.VcEOwcG9CCjvSwgyFAY-9XHPUdw_aYSGDUJstK9PKR0
