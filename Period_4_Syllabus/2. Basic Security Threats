@@ -1,3 +1,0 @@
-2. Explain basic security threads like: Cross Site Scripting (XSS), SQL Injection and whether something similar to SQL
-injection is possible with NoSQL databases like MongoDB, and DOS-attacks. Explain/demonstrate ways to cope with these
-problems
